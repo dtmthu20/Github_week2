@@ -9,13 +9,8 @@ $ git branch #xem cac branch
   test_v1.0
 
 Admin@DESKTOP-FCF5SBE MINGW64 ~/Github_week2 (main)
-$ git fetch #download remote repo to local repo 
+$ git fetch --all #lay ve tat ca cac branch tu remote repository
 
-Admin@DESKTOP-FCF5SBE MINGW64 ~/Github_week2 (main)
-$ git branch #xem cac branch
-  dev_v0.1
-* main
-  test_v1.0
 
 Admin@DESKTOP-FCF5SBE MINGW64 ~/Github_week2 (main)
 $ git switch dev_v0.1 #chuyen giua cac branch, tuong tu nhu git checkout
@@ -23,7 +18,7 @@ Switched to branch 'dev_v0.1'
 Your branch is up to date with 'origin/dev_v0.1'.
 
 Admin@DESKTOP-FCF5SBE MINGW64 ~/Github_week2 (dev_v0.1)
-$ git add week2.sh #add file week2.sh to staging area
+$ git add week2.sh #add file week2.sh to dev_v0.1 branch
 warning: in the working copy of 'week2.sh', LF will be replaced by CRLF the next time Git touches it
 
 Admin@DESKTOP-FCF5SBE MINGW64 ~/Github_week2 (dev_v0.1)
@@ -63,17 +58,7 @@ To https://github.com/dtmthu20/Github_week2
    c1fc355..be411d2  main -> main
 
 Admin@DESKTOP-FCF5SBE MINGW64 ~/Github_week2 (main)
-$ git switch dev_v0.1
-Switched to branch 'dev_v0.1'
-Your branch is up to date with 'origin/dev_v0.1'.
-
-Admin@DESKTOP-FCF5SBE MINGW64 ~/Github_week2 (dev_v0.1)
-$ git checkout main 
-Switched to branch 'main'
-Your branch is up to date with 'origin/main'.
-
-Admin@DESKTOP-FCF5SBE MINGW64 ~/Github_week2 (main)
-$ git checkout dev_v0.1 
+$ git checkout dev_v0.1 #chuyen ve branch dev_v0.1
 Switched to branch 'dev_v0.1'
 Your branch is up to date with 'origin/dev_v0.1'.
 
@@ -81,22 +66,13 @@ Admin@DESKTOP-FCF5SBE MINGW64 ~/Github_week2 (dev_v0.1)
 $ code code_week2.sh
 
 Admin@DESKTOP-FCF5SBE MINGW64 ~/Github_week2 (dev_v0.1)
-$ git checkout test_v1.0
+$ git checkout test_v1.0 #chuyen den branch test_v1.0
 Switched to branch 'test_v1.0'
 Your branch is up to date with 'origin/test_v1.0'.
 
 Admin@DESKTOP-FCF5SBE MINGW64 ~/Github_week2 (test_v1.0)
-$ git checkout -b dev_v0.2/
-fatal: 'dev_v0.2/' is not a valid branch name
-hint: See `man git check-ref-format`
-hint: Disable this message with "git config set advice.refSyntax false"
-
-Admin@DESKTOP-FCF5SBE MINGW64 ~/Github_week2 (test_v1.0)
-$ git checkout -b dev_v0.2
+$ git checkout -b dev_v0.2 #create new branch dev_v0.2 and switch to it, -b: create a new branch
 Switched to a new branch 'dev_v0.2'
-
-Admin@DESKTOP-FCF5SBE MINGW64 ~/Github_week2 (dev_v0.2)
-$ git fetch 
 
 Admin@DESKTOP-FCF5SBE MINGW64 ~/Github_week2 (dev_v0.2)
 $ git fetch --all
@@ -109,16 +85,7 @@ $ git branch
   test_v1.0
 
 Admin@DESKTOP-FCF5SBE MINGW64 ~/Github_week2 (dev_v0.2)
-$ cp code_week2.sh/dev_v0.2
-cp: missing destination file operand after 'code_week2.sh/dev_v0.2'
-Try 'cp --help' for more information.
-
-Admin@DESKTOP-FCF5SBE MINGW64 ~/Github_week2 (dev_v0.2)
-$ cp code_week2.sh/dev_v0.2 dev_v0.1
-cp: cannot stat 'code_week2.sh/dev_v0.2': No such file or directory
-
-Admin@DESKTOP-FCF5SBE MINGW64 ~/Github_week2 (dev_v0.2)
-$ git push -u origin dev_v0.2 #push changes to remote repository, create new branch dev_v0.2
+$ git push -u origin dev_v0.2 #push branch dev_v0.2 lan dau tien len remote repository, -u: set upstream branch (lan sau se khong can -u nua)
 Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
 Delta compression using up to 8 threads
