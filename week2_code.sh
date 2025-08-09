@@ -118,4 +118,17 @@ $ cp code_week2.sh/dev_v0.2 dev_v0.1
 cp: cannot stat 'code_week2.sh/dev_v0.2': No such file or directory
 
 Admin@DESKTOP-FCF5SBE MINGW64 ~/Github_week2 (dev_v0.2)
-$
+$ git push -u origin dev_v0.2 #push changes to remote repository, create new branch dev_v0.2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.31 KiB | 671.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'dev_v0.2' on GitHub by visiting:
+remote:      https://github.com/dtmthu20/Github_week2/pull/new/dev_v0.2
+remote:
+To https://github.com/dtmthu20/Github_week2
+ * [new branch]      dev_v0.2 -> dev_v0.2
+branch 'dev_v0.2' set up to track 'origin/dev_v0.2'.
